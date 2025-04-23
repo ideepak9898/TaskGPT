@@ -26,7 +26,7 @@ app.use(cors({
 // }))
 
 app.get('/', (req, res) => {
-    res.send("Hello, welcome to todogpt")
+    res.send("Hi, Welcome to TaskGPT")
 })
 
 app.use("/api", taskRoutes);
