@@ -17,13 +17,12 @@ app.use(cors({
 
 
 
-// app.use(session({
-//     secret : process.env.SESSION_SECRET,
-//     resave : false,
-//     saveUninitialized : true,
-//     cookie:{secure : false} // i will set it to true while deploying
-
-// }))
+app.use(session({
+    secret : process.env.SESSION_SECRET,
+    resave : false,
+    saveUninitialized : true,
+    cookie:{secure : true}
+}))
 
 app.get('/', (req, res) => {
     res.send("Hi, Welcome to TaskGPT")
