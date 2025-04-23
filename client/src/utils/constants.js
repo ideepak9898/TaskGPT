@@ -1,1 +1,1 @@
-export const API_URL = "http://localhost:5050";
+export const API_URL = "task-gpt-one.vercel.app";
