@@ -11,7 +11,7 @@ connectDB()
 
 // app.use(cors({ origin: "*" }));
 app.use(cors({
-    origin: ["https://task-gpt-one.vercel.app"],
+    origin: '*', // for now, allow all
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
   }));
 
@@ -20,7 +20,6 @@ app.use(session({
     resave : false,
     saveUninitialized : true,
     cookie:{secure : true}
-
 }))
 
 app.get('/', (req, res) => {
