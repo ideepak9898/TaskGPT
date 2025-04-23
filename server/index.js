@@ -10,10 +10,16 @@ app.use(express.json())
 connectDB()
 
 // app.use(cors({ origin: "*" }));
+// app.use(cors({
+//     origin: ["https://task-gpt-deep.vercel.app"], // for now, allow all
+//     methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//   }));
+
 app.use(cors({
-    origin: ["https://task-gpt-deep.vercel.app"], // for now, allow all
+    origin: 'https://task-gpt-deep.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  }));
+    credentials: true
+}));
 
 // app.use(session({
 //     secret : process.env.SESSION_SECRET,
