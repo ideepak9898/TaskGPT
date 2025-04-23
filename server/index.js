@@ -11,7 +11,7 @@ connectDB()
 
 // app.use(cors({ origin: "*" }));
 app.use(cors({
-    origin: '*', // for now, allow all
+    origin: ["https://task-gpt-deep.vercel.app"], // for now, allow all
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
   }));
 
