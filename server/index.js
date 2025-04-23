@@ -16,7 +16,7 @@ connectDB()
 //   }));
 
 app.use(cors({
-    origin: 'https://task-gpt-deep.vercel.app',
+    origin: ['https://task-gpt-deep.vercel.app'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 }));
