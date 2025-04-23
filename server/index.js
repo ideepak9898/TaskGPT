@@ -11,19 +11,17 @@ connectDB()
 
 // app.use(cors({ origin: "*" }));
 app.use(cors({
-    origin: '*', // for now, allow all
+    origin: ["https://task-gpt-one.vercel.app"],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
   }));
 
-// console.log("API KEY:", process.env.OPENAI_API_KEY);
+app.use(session({
+    secret : process.env.SESSION_SECRET,
+    resave : false,
+    saveUninitialized : true,
+    cookie:{secure : true}
 
-// app.use(session({
-//     secret : process.env.SESSION_SECRET,
-//     resave : false,
-//     saveUninitialized : true,
-//     cookie:{secure : false} // i will set it to true while deploying
-
-// }))
+}))
 
 app.get('/', (req, res) => {
     res.send("Hi, Welcome to TaskGPT")
