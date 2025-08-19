@@ -18,6 +18,7 @@
     "@reduxjs/toolkit": "^2.3.0",
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
+    "cors": "^2.8.5",
     "framer-motion": "^11.11.11",
     "notistack": "^3.0.1",
     "react": "^18.3.1",

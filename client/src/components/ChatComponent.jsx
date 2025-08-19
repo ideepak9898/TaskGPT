@@ -51,7 +51,7 @@ const ChatComponent = ({ onClose }) => {
     setIsTyping(true);
 
     try {
-      const response = await axios.post(`${API_URL}/api/openai/completion`, {
+      const response = await axios.post(`${API_URL}/api/gemini/completion`, {
         query: input,
       });
 
