@@ -9,7 +9,7 @@ app.use(express.json())
 connectDB()
 
 app.use(cors({
-    origin: '*', // for now, allow all
+    origin: ["http://localhost:5050", "https://taskgpt-jqur.onrender.com"],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
   }));
 
