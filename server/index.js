@@ -11,6 +11,7 @@ connectDB()
 app.use(cors({
     origin: ["http://localhost:5050", "https://taskgpt-jqur.onrender.com"],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ["Content-Type", "Authorization"]
   }));
 
 app.get('/', (req, res) => {
