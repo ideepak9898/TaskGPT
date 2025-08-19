@@ -8,18 +8,12 @@ const app = express()
 app.use(express.json())
 connectDB()
 
-// app.use(cors({
-//     origin: ["http://localhost:5050", "https://taskgpt-jqur.onrender.com"],
-//     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-//     allowedHeaders: ["Content-Type", "Authorization"]
-//   }));
-
 app.use(
   cors({
     origin: [
-      "http://localhost:5173",       // local dev frontend
-      "http://localhost:3000",       // if you run CRA locally
-      "https://task-gpt-deep.vercel.app" // your deployed frontend
+      "http://localhost:5173",
+      "http://localhost:3000",
+      "https://task-gpt-deep.vercel.app"
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
