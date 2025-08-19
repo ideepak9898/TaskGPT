@@ -13,12 +13,6 @@ app.use(cors({
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
   }));
 
-
-// app.use(cors({
-//     origin: ['https://task-gpt-deep.vercel.app'],
-//     methods: ['GET', 'POST', 'PUT', 'DELETE']
-// }));
-
 app.get('/', (req, res) => {
     res.send("Hi, Welcome to TaskGPT")
 })
