@@ -1,3 +1,3 @@
-export const API_URL = "https://taskgpt-backend.vercel.app";
+export const API_URL = "https://task-gpt-server.vercel.app/";
 
 // 'http://localhost:5050'
