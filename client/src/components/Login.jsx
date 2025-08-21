@@ -26,26 +26,43 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Login attempt with:", formData); // Debug log
     try {
-      await dispatch(loginUser(formData)).unwrap();
+      const result = await dispatch(loginUser(formData)).unwrap();
+      console.log("Login successful:", result); // Debug log
       setFormData({ identifier: "", password: "" });
       setShowSuccessPopup(true);
       setTimeout(() => {
         setShowSuccessPopup(false);
-        navigate("/tasks", { replace: true });
+        console.log("Redirecting to tasks..."); // Debug log
+        window.location.href = "/#/tasks"; // Force redirect
       }, 2000);
     } catch (err) {
+      console.error("Login error:", err); // Debug log
       const message = typeof err === "string" ? err : err?.message || "Login failed";
       toast.error(message);
     }
   };
 
   useEffect(() => {
+    // Test backend connectivity
+    fetch("https://taskgpt-jqur.onrender.com/")
+      .then(response => response.text())
+      .then(data => {
+        console.log("Backend response:", data);
+      })
+      .catch(error => {
+        console.error("Backend connection error:", error);
+      });
+  }, []);
+
+  useEffect(() => {
+    console.log("Current token:", token); // Debug log
     if (token) {
-      // Remove the automatic redirect since we're handling it in handleSubmit
-      // navigate("/tasks", { replace: true });
+      console.log("Token detected, redirecting..."); // Debug log
+      window.location.href = "/#/tasks"; // Force redirect
     }
-  }, [token, navigate]);
+  }, [token]);
 
   return (
     <Box
