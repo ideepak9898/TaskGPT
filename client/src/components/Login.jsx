@@ -56,13 +56,14 @@ const Login = () => {
       });
   }, []);
 
-  useEffect(() => {
-    console.log("Current token:", token); // Debug log
-    if (token) {
-      console.log("Token detected, redirecting..."); // Debug log
-      window.location.href = "/#/tasks"; // Force redirect
-    }
-  }, [token]);
+  // Remove the automatic redirect useEffect since we're handling it in handleSubmit
+  // useEffect(() => {
+  //   console.log("Current token:", token); // Debug log
+  //   if (token) {
+  //     console.log("Token detected, redirecting..."); // Debug log
+  //     window.location.href = "/#/tasks"; // Force redirect
+  //   }
+  // }, [token]);
 
   return (
     <Box
