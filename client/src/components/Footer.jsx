@@ -25,7 +25,7 @@ const Footer = () => {
             fontSize: "0.9rem",
           }}
         >
-          © 2025 TaskGPT. Built with ❤️ by Md. Manish Raj
+          © 2025 TaskGPT. Built with ❤️ by Deepak
         </Typography>
         <Box
           sx={{
