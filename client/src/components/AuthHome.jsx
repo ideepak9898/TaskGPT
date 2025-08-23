@@ -80,7 +80,7 @@ const AuthHome = () => {
                     textShadow: "0 0 30px rgba(20, 209, 209, 0.5)",
                   }}
                 >
-                  TaskGPT
+                  TaskPilot
                 </Box>
               </Typography>
 

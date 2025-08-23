@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from "../features/authSlice";
 import { toast } from "react-toastify";
+import { API_URL } from "../utils/constants";
 import { Box, Typography, Button, Container, Paper, TextField, Stack, IconButton, Dialog, DialogContent } from "@mui/material";
 import { motion } from "framer-motion";
 import { ArrowBack } from "@mui/icons-material";
@@ -46,7 +47,7 @@ const Login = () => {
 
   useEffect(() => {
     // Test backend connectivity
-    fetch("https://taskgpt-jqur.onrender.com/")
+    fetch(`${API_URL}/`)
       .then(response => response.text())
       .then(data => {
         console.log("Backend response:", data);

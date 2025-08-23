@@ -1,6 +1,6 @@
 {
-  "name": "TaskGPT",
-  "short_name": "TaskGPT",
+  "name": "TaskPilot",
+  "short_name": "TaskPilot",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

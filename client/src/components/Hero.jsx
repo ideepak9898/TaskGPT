@@ -131,7 +131,7 @@ const Hero = () => {
           transition={{ type: "spring", stiffness: 100, damping: 25 }}
           style={{ display: "inline-block" }}
         >
-          TaskGPT
+                      TaskPilot
         </motion.span>
       </motion.h1>
 
