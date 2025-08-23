@@ -1,6 +1,6 @@
 export const API_URL =
   process.env.NODE_ENV === "production"
-    ? "https://task-pilot-servers.vercel.app/"
+    ? "https://task-pilot-servers.vercel.app"
     : "http://localhost:5050";
 
 export const BASE_URL =
